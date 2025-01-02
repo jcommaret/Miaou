@@ -1,8 +1,12 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Miaou
+
+This app is a simple chat app using Mistral AI built with React Native
+
+# Demo : Sur youtube [![Miaou App Demo](https://img.youtube.com/vi/GvbKsmznmSY/0.jpg)](https://www.youtube.com/watch?v=GvbKsmznmSY)
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
 
