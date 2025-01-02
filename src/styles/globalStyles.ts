@@ -51,30 +51,6 @@ export const createStyles = (isDarkMode: boolean) =>
       fontSize: 14,
       textAlign: 'center',
     },
-    modelSelector: {
-      flexDirection: 'row',
-      justifyContent: 'space-around',
-      padding: 10,
-      marginVertical: 10,
-    },
-    modelButton: {
-      padding: 8,
-      borderRadius: 16,
-      backgroundColor: isDarkMode ? '#333' : '#fff',
-      borderWidth: 1,
-      borderColor: isDarkMode ? '#444' : '#ddd',
-    },
-    selectedModelButton: {
-      backgroundColor: '#007AFF',
-      borderColor: '#007AFF',
-    },
-    modelButtonText: {
-      color: isDarkMode ? '#fff' : '#333',
-      fontSize: 14,
-    },
-    selectedModelButtonText: {
-      color: '#fff',
-    },
     pickerContainer: {
       marginVertical: 10,
       borderWidth: 1,
@@ -125,5 +101,117 @@ export const createStyles = (isDarkMode: boolean) =>
     },
     selectedModelItemText: {
       fontWeight: '600',
+    },
+    chatContainer: {
+      flex: 1,
+      backgroundColor: isDarkMode ? '#000000' : '#FFFFFF',
+      paddingBottom: 20,
+    },
+    messageContainer: {
+      margin: 8,
+      padding: 12,
+      borderRadius: 12,
+      maxWidth: '80%',
+    },
+    userMessage: {
+      alignSelf: 'flex-end',
+      backgroundColor: '#007AFF',
+    },
+    aiMessage: {
+      alignSelf: 'flex-start',
+      backgroundColor: isDarkMode ? '#333' : '#E9E9EB',
+    },
+    messageText: {
+      fontSize: 16,
+    },
+    userMessageText: {
+      color: '#fff',
+    },
+    aiMessageText: {
+      color: isDarkMode ? '#fff' : '#000',
+    },
+    chatInputContainer: {
+      flexDirection: 'row',
+      padding: 8,
+      borderTopWidth: 1,
+      borderTopColor: isDarkMode ? '#333' : '#ccc',
+      backgroundColor: isDarkMode ? Colors.black : '#fff',
+    },
+    chatInput: {
+      flex: 1,
+      marginRight: 8,
+      padding: 8,
+      borderWidth: 1,
+      borderColor: isDarkMode ? '#444' : '#ccc',
+      borderRadius: 16,
+      maxHeight: 100,
+      color: isDarkMode ? '#fff' : '#000',
+      backgroundColor: isDarkMode ? '#222' : '#fff',
+    },
+    chatSendButton: {
+      backgroundColor: '#007AFF',
+      padding: 8,
+      borderRadius: 16,
+      justifyContent: 'center',
+      alignItems: 'center',
+      minWidth: 80,
+    },
+    chatSendButtonDisabled: {
+      backgroundColor: '#ccc',
+    },
+    chatSendButtonText: {
+      color: '#fff',
+      fontWeight: '600',
+    },
+    messagesContainer: {
+      padding: 16,
+    },
+    messageRole: {
+      fontSize: 12,
+      marginBottom: 4,
+      color: isDarkMode ? '#999' : '#666',
+    },
+    userMessageRole: {
+      color: '#fff',
+    },
+    chatErrorText: {
+      color: 'red',
+      padding: 8,
+      textAlign: 'center',
+    },
+    safeAreaContainer: {
+      flex: 1,
+    },
+    successText: {
+      color: '#2ECC71',
+    },
+    errorText: {
+      color: '#E74C3C',
+    },
+    title: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      marginBottom: 20,
+      color: isDarkMode ? '#FFFFFF' : '#000000',
+    },
+    warningContainer: {
+      backgroundColor: '#FFF3CD',
+      padding: 15,
+      borderRadius: 8,
+      marginBottom: 20,
+    },
+    warningText: {
+      color: '#856404',
+      textAlign: 'center',
+    },
+    primaryButton: {
+      backgroundColor: '#007AFF',
+      marginTop: 10,
+    },
+    disabledButton: {
+      backgroundColor: '#ccc',
+    },
+    disabledButtonText: {
+      color: '#666',
     },
   });
