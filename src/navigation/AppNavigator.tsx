@@ -2,7 +2,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from '../screens/HomeScreen';
-import DetailsScreen from '../screens/DetailsScreen';
+import ChatScreen from '../screens/ChatScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,9 +16,9 @@ export function AppNavigator(): React.JSX.Element {
           options={{title: 'Miaou'}}
         />
         <Stack.Screen
-          name="Details"
-          component={DetailsScreen}
-          options={{title: 'Détails'}}
+          name="Chat"
+          component={ChatScreen}
+          options={{title: 'Chat'}}
         />
       </Stack.Navigator>
     </NavigationContainer>
