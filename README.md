@@ -2,7 +2,7 @@
 
 This app is a simple chat app using Mistral AI built with React Native
 
-# Demo : Sur youtube [![Miaou App Demo](https://img.youtube.com/vi/GvbKsmznmSY/0.jpg)](https://www.youtube.com/watch?v=GvbKsmznmSY)
+[![Miaou App Demo](https://img.youtube.com/vi/GvbKsmznmSY/0.jpg)](https://www.youtube.com/watch?v=GvbKsmznmSY)
 
 # Getting Started
 
