@@ -129,12 +129,7 @@ function PreferencesScreen(): React.JSX.Element {
         style={styles.container}>
         <View style={styles.contentContainer}>
           <Text style={styles.title}>Préférences</Text>
-          <View style={styles.warningContainer}>
-            <Text style={styles.warningText}>
-              Veuillez configurer votre clé API et sélectionner un modèle dans
-              les préférences avant de commencer.
-            </Text>
-          </View>
+
           <Text style={styles.label}>Clé API Mistral</Text>
           <TextInput
             style={styles.input}
