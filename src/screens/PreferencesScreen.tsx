@@ -28,6 +28,9 @@ function PreferencesScreen(): React.JSX.Element {
   const styles = createStyles(isDarkMode);
   const {checkConfiguration} = useConfigurationStore();
 
+  // Référence pour le timeout de debounce
+  const timeoutRef = React.useRef<NodeJS.Timeout>();
+
   const handleModels = useCallback(
     async (key: string) => {
       if (!key || isLoading) return null;
@@ -98,19 +101,33 @@ function PreferencesScreen(): React.JSX.Element {
   const handleApiKeyChange = async (value: string) => {
     setApiKey(value);
     setIsValidKey(null);
+
+    // Annule le timeout précédent s'il existe
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
     try {
       await storage.saveApiKey(value);
+      // Attend 500ms après que l'utilisateur ait arrêté de taper
+      timeoutRef.current = setTimeout(async () => {
+        if (value.trim()) {
+          await handleModels(value);
+        }
+      }, 500);
     } catch (error) {
       console.error('Erreur lors de la sauvegarde de la clé API:', error);
     }
   };
 
-  const verifyApiKey = async () => {
-    const models = await handleModels(apiKey);
-    if (models) {
-      await checkConfiguration();
-    }
-  };
+  // Nettoie le timeout au démontage du composant
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   const handleModelSelect = async (modelId: string) => {
     setSelectedModel(modelId);
@@ -164,8 +181,6 @@ function PreferencesScreen(): React.JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={styles.container}>
         <View style={styles.contentContainer}>
-          <Text style={styles.title}>Préférences</Text>
-
           <Text style={styles.label}>Clé API Mistral</Text>
           <TextInput
             style={styles.input}
@@ -175,9 +190,6 @@ function PreferencesScreen(): React.JSX.Element {
             placeholderTextColor={styles.placeholderTextColor.color}
             secureTextEntry
           />
-          <TouchableOpacity style={styles.button} onPress={verifyApiKey}>
-            <Text style={styles.buttonText}>Vérifier la clé API</Text>
-          </TouchableOpacity>
 
           {isValidKey && (
             <>
@@ -215,21 +227,7 @@ function PreferencesScreen(): React.JSX.Element {
             </View>
           </Modal>
 
-          {isValidKey !== null && (
-            <Text
-              style={[
-                styles.validationText,
-                {
-                  color: isValidKey
-                    ? styles.successText.color
-                    : styles.errorText.color,
-                },
-              ]}>
-              {isValidKey ? 'Clé API valide' : 'Clé API invalide'}
-            </Text>
-          )}
-
-          <ChatAccessButton />
+          {selectedModel && <ChatAccessButton />}
         </View>
       </ScrollView>
     </SafeAreaView>
