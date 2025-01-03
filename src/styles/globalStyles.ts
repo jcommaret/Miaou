@@ -214,4 +214,56 @@ export const createStyles = (isDarkMode: boolean) =>
     disabledButtonText: {
       color: '#666',
     },
+    headerIconContainer: {
+      marginRight: 15,
+      padding: 5,
+    },
+    headerIcon: {
+      width: 24,
+      height: 24,
+    },
+    modalContainer: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    },
+    modalContent: {
+      backgroundColor: isDarkMode ? '#1a1a1a' : '#ffffff',
+      borderRadius: 10,
+      padding: 20,
+      width: '80%',
+      maxHeight: '80%',
+    },
+    modalTitle: {
+      fontSize: 18,
+      fontWeight: 'bold',
+      marginBottom: 15,
+      textAlign: 'center',
+      color: isDarkMode ? '#ffffff' : '#000000',
+    },
+    modelList: {
+      maxHeight: 300,
+    },
+    closeButton: {
+      marginTop: 15,
+      padding: 10,
+      backgroundColor: isDarkMode ? '#333333' : '#e0e0e0',
+      borderRadius: 5,
+      alignItems: 'center',
+    },
+    closeButtonText: {
+      color: isDarkMode ? '#ffffff' : '#000000',
+      fontSize: 16,
+    },
+    modelSelector: {
+      backgroundColor: isDarkMode ? '#333333' : '#e0e0e0',
+      padding: 12,
+      borderRadius: 5,
+      marginBottom: 15,
+    },
+    modelSelectorText: {
+      color: isDarkMode ? '#ffffff' : '#000000',
+      fontSize: 16,
+    },
   });

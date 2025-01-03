@@ -7,8 +7,22 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import HomeScreen from '../screens/HomeScreen';
 import ChatScreen from '../screens/ChatScreen';
 import PreferencesScreen from '../screens/PreferencesScreen';
+import {createStyles} from '../styles/globalStyles';
 
 const Stack = createNativeStackNavigator();
+
+const SettingsButton = ({navigation, icon}: {navigation: any; icon: any}) => {
+  const isDarkMode = useColorScheme() === 'dark';
+  const styles = createStyles(isDarkMode);
+
+  return (
+    <TouchableOpacity
+      onPress={() => navigation.navigate('Preferences' as never)}
+      style={styles.headerIconContainer}>
+      <Image source={icon} style={styles.headerIcon} />
+    </TouchableOpacity>
+  );
+};
 
 export function AppNavigator(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -46,14 +60,7 @@ export function AppNavigator(): React.JSX.Element {
             title: 'Miaou',
             headerRight: () =>
               settingsIcon ? (
-                <TouchableOpacity
-                  onPress={() => navigation.navigate('Preferences' as never)}
-                  style={{marginRight: 15, padding: 5}}>
-                  <Image
-                    source={settingsIcon}
-                    style={{width: 24, height: 24}}
-                  />
-                </TouchableOpacity>
+                <SettingsButton navigation={navigation} icon={settingsIcon} />
               ) : null,
           })}
         />
@@ -69,14 +76,7 @@ export function AppNavigator(): React.JSX.Element {
             title: 'Chat',
             headerRight: () =>
               settingsIcon ? (
-                <TouchableOpacity
-                  onPress={() => navigation.navigate('Preferences' as never)}
-                  style={{marginRight: 15, padding: 5}}>
-                  <Image
-                    source={settingsIcon}
-                    style={{width: 24, height: 24}}
-                  />
-                </TouchableOpacity>
+                <SettingsButton navigation={navigation} icon={settingsIcon} />
               ) : null,
           })}
         />
