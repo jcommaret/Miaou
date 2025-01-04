@@ -1,6 +1,13 @@
 import {StyleSheet} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
+// Constants
+export const ICON_SETTINGS = {
+  size: 24,
+  lightColor: '#000000',
+  darkColor: '#FFFFFF',
+};
+
 export const createStyles = (isDarkMode: boolean) =>
   StyleSheet.create({
     // Layout containers
@@ -221,8 +228,11 @@ export const createStyles = (isDarkMode: boolean) =>
       padding: 5,
     },
     headerIcon: {
-      width: 24,
-      height: 24,
+      width: ICON_SETTINGS.size,
+      height: ICON_SETTINGS.size,
+      tintColor: isDarkMode
+        ? ICON_SETTINGS.darkColor
+        : ICON_SETTINGS.lightColor,
     },
 
     // Status and feedback

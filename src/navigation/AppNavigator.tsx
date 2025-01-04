@@ -41,27 +41,29 @@ const SettingsButton: React.FC<SettingsButtonProps> = ({navigation}) => {
   );
 };
 
-export function AppNavigator(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+const chatScreenOptions = {
+  title: 'Le Chat',
+  headerBackVisible: false,
+  headerRight: (props: any) => <SettingsButton navigation={props.navigation} />,
+};
 
+const RéglagesScreenOptions = {
+  headerShown: false,
+};
+
+export function AppNavigator(): React.JSX.Element {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Réglages">
         <Stack.Screen
           name="Réglages"
           component={PreferencesScreen}
-          options={{
-            headerShown: false,
-          }}
+          options={RéglagesScreenOptions}
         />
         <Stack.Screen
           name="Chat"
           component={ChatScreen}
-          options={({navigation}) => ({
-            title: 'Le Chat',
-            headerBackVisible: false,
-            headerRight: () => <SettingsButton navigation={navigation} />,
-          })}
+          options={chatScreenOptions}
         />
       </Stack.Navigator>
     </NavigationContainer>
