@@ -2,7 +2,7 @@ name: Expo Deploy
 on:
   push:
     branches:
-      - main # ou master, selon votre branche principale
+      - master # ou master, selon votre branche principale
 
 jobs:
   build:
