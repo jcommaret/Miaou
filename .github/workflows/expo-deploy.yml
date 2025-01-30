@@ -13,8 +13,8 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 22.x
-          cache: npm
+          node-version: 22.11.x
+          cache: yarn
 
       - name: Setup Expo
         uses: expo/expo-github-action@v8
