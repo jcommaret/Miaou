@@ -13,7 +13,8 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jcommaret.Miaou"
     },
     "android": {
       "adaptiveIcon": {
@@ -23,6 +24,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7dcf5303-4f00-437e-8ff4-fae2a24c8921"
+      }
+    },
+    "owner": "jcommaret"
   }
 }
