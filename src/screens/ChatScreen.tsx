@@ -1,3 +1,6 @@
+// Ajoutez cet import en haut du fichier
+import { MISTRAL_API_KEY, MISTRAL_MODEL } from "@env";
+
 // Imports React et hooks de base
 import React, { useState, useEffect, useRef } from "react";
 
@@ -27,9 +30,6 @@ import type { ChatScreenRouteProp, ChatMessage, Message } from "../types";
 
 // Styles
 import { Styles } from "../styles";
-
-// Ajoutez cet import en haut du fichier
-import { MISTRAL_API_KEY, MISTRAL_MODEL } from "@env";
 
 export function ChatScreen(): React.JSX.Element {
   const route = useRoute<ChatScreenRouteProp>();
