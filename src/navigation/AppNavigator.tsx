@@ -20,8 +20,12 @@ export function AppNavigator(): React.JSX.Element {
   return (
     <NavigationContainer theme={theme}>
       <Stack.Navigator
+        id={undefined}
         initialRouteName="Chat"
-        screenOptions={{ headerShown: false }}
+        screenOptions={{
+          headerShown: true,
+          headerTitle: "Le chat",
+        }}
       >
         <Stack.Screen name="Chat" component={ChatScreen} />
       </Stack.Navigator>
