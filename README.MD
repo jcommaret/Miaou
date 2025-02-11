@@ -8,7 +8,6 @@ Elle a été realisée quelques semaines avant que Mistral publie sa propre appl
 - Interface de chat intuitive
 - Intégration avec l'API Mistral AI
 - Support des thèmes clair/sombre
-- Stockage local des messages
 - Interface utilisateur responsive
 
 ## 🛠 Technologies Utilisées
@@ -23,7 +22,7 @@ Elle a été realisée quelques semaines avant que Mistral publie sa propre appl
 
 ## 📱 Prérequis
 
-- Node.js (version 20.16.0)
+- Node.js
 - npm ou yarn
 - Expo CLI
 - Un compte Expo
@@ -62,7 +61,6 @@ npm start
 - `npm start` : Lance le serveur de développement Expo
 - `npm run android` : Lance l'application sur Android
 - `npm run ios` : Lance l'application sur iOS
-- `npm run web` : Lance l'application en version web
 
 ## 🏗 Structure du Projet
 
