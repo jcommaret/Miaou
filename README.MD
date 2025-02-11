@@ -1,6 +1,7 @@
 # Miaou - Application de Chat IA
 
-Une application mobile de chat alimentée par l'API Mistral AI, construite avec React Native et Expo.
+Cette application est une application de chat avec l'IA Mistral AI.
+Elle a été realisée quelques semaines avant que Mistral publie sa propre application.
 
 ## 🚀 Fonctionnalités
 
