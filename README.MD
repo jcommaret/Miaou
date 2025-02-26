@@ -15,9 +15,6 @@ Elle a été realisée quelques semaines avant que Mistral publie sa propre appl
 - React Native
 - Expo
 - TypeScript
-- Zustand (Gestion d'état)
-- React Navigation
-- AsyncStorage
 - API Mistral AI
 
 ## 📱 Prérequis
@@ -46,8 +43,8 @@ npm install
 3. Créez un fichier `.env` à la racine du projet :
 
 ```plaintext
-MISTRAL_API_KEY=votre_clé_api_mistral
-MISTRAL_MODEL=votre_modèle_choisi
+MISTRAL_API_KEY=<votre_clé_api_mistral>
+MISTRAL_MODEL=<votre_modèle_choisi>
 ```
 
 4. Lancez l'application :
