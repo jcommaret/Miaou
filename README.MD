@@ -1,6 +1,6 @@
 # Miaou - Application de Chat IA
 
-Cette application est une application de chat avec l'IA Mistral AI.
+C'est une application de chat avec l'IA Mistral AI.
 Elle a été realisée quelques semaines avant que Mistral publie sa propre application.
 
 ## 🚀 Fonctionnalités
