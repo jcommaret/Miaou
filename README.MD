@@ -8,7 +8,6 @@ Elle a été realisée quelques semaines avant que Mistral publie sa propre appl
 - Interface de chat intuitive
 - Intégration avec l'API Mistral AI
 - Support des thèmes clair/sombre
-- Interface utilisateur responsive
 
 ## 🛠 Technologies Utilisées
 
