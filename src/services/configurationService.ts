@@ -1,5 +1,5 @@
 import {create} from 'zustand';
-import {storage} from './index';
+import {storage} from './storage';
 import {ConfigurationState} from '../types';
 
 export const useConfigurationStore = create<ConfigurationState>(set => ({

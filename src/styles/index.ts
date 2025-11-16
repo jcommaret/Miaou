@@ -1,8 +1,17 @@
 import { StyleSheet } from "react-native";
-import { Colors } from "react-native/Libraries/NewAppScreen";
 import type { Theme } from "@react-navigation/native";
 
 // Constants
+// Colors object (replacement for deprecated NewAppScreen Colors)
+const Colors = {
+  lighter: "#F3F3F3",
+  light: "#48484A",
+  dark: "#1C1C1E",
+  darker: "#000000",
+  black: "#000000",
+  white: "#FFFFFF",
+};
+
 export const ICON_SETTINGS = {
   size: 24,
   lightColor: "#000000",
