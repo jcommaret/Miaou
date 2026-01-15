@@ -47,6 +47,7 @@ export function ChatScreen(): React.JSX.Element {
 
   useEffect(() => {
     console.log("API Key:", MISTRAL_API_KEY); // À retirer après le test
+    console.log("Model ID:", MISTRAL_MODEL); // Pour vérifier le modèle configuré
     const welcomeMessage: Message = {
       id: Date.now().toString(),
       text: "Comment puis-je vous aider aujourd'hui ?",
